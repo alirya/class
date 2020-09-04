@@ -2,7 +2,7 @@ import Validator from "@dikac/t-validator/simple";
 import Validatable from "@dikac/t-validatable/validatable";
 import Message from "@dikac/t-message/message";
 import Value from "@dikac/t-value/value";
-import StringValidatable from "../validatable/class";
+import ClassValidatable from "../validatable/class";
 import Instance from "@dikac/t-validator/validatable/validatable";
 import Return from "@dikac/t-validator/validatable/simple";
 
@@ -21,6 +21,6 @@ export default class Class<MessageT>
     validate<Argument extends unknown>(value: Argument): Return<unknown, Argument, string, Readonly<Instance<unknown, MessageT>>>
     validate<Argument extends unknown>(value: Argument) {
 
-        return  StringValidatable(value, this.message);
+        return  ClassValidatable(value, this.message);
     }
 }

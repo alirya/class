@@ -1,1 +1,1 @@
-{"version":3,"file":"instance.js","sourceRoot":"","sources":["../../src/boolean/instance.ts"],"names":[],"mappings":";;;;;;;;;;;IAEA,SAAwB,QAAQ,CAG5B,KAAe,EACf,QAAoB;QAGpB,OAAO,KAAK,YAAY,QAAQ,CAAC;IACrC,CAAC;IARD,2BAQC"}
+{"version":3,"file":"instance.js","sourceRoot":"","sources":["../../src/boolean/instance.ts"],"names":[],"mappings":";;;;;;;;;;;IAGA,SAAwB,QAAQ,CAG5B,KAAe,EACf,QAAoB;QAGpB,OAAO,KAAK,YAAY,QAAQ,CAAC;IACrC,CAAC;IARD,2BAQC"}

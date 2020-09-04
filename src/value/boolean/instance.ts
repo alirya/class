@@ -1,11 +1,12 @@
 import Value from "@dikac/t-value/value";
 import BooleanInstance from "../../boolean/instance";
-import Class from "../../class/class";
+import ClassContainer from "../../class/class";
+import Class from "../../class";
 
 export default function Instance<
-    Instance extends {new(...a:unknown[]): any}
+    Instance extends Class<object, unknown[]>
 >(
-    value : Value<unknown> & Class<Instance>
+    value : Value<unknown> & ClassContainer<Instance>
 ) : boolean {
 
     return BooleanInstance(value.value, value.class);

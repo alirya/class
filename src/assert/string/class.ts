@@ -8,7 +8,7 @@ export default function Class(
 ) : string {
 
     let sentence = SentencesIs(valid);
-    sentence.object.push('string');
+    sentence.object.push('constructor');
     sentence.subject.push(subject);
 
     if(!valid) {

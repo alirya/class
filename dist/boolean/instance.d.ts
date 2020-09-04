@@ -1,4 +1,3 @@
 import { Class } from "ts-toolbelt";
-export default function Instance<InstanceT extends {
-    new (...a: unknown[]): any;
-}>(value: unknown, instance: InstanceT): value is Class.InstanceOf<InstanceT>;
+import Constructor from "../class";
+export default function Instance<InstanceT extends Constructor<object, unknown[]>>(value: unknown, instance: InstanceT): value is Class.InstanceOf<InstanceT>;

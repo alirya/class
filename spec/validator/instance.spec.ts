@@ -140,7 +140,7 @@ describe(`validate`,function() {
             }
         }
 
-        let validator = new Instance<{new(data):Test}>(Test, InstanceString);
+        let validator = new Instance<typeof Test>(Test, InstanceString);
 
         it('valid', ()=>{
 

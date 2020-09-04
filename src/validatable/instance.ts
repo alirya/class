@@ -5,8 +5,9 @@ import MergeWrapper from "@dikac/t-validator/validatable/readonly-merge";
 import MessageCallback from "@dikac/t-validator/validatable/callback-function";
 import InstanceBoolean from "../value/boolean/instance";
 import ClassInterface from "../class/class";
+import Class from "../class";
 
-export default class Instance<ValueT, InstanceT extends {new(...a:unknown[]): any}, MessageT>
+export default class Instance<ValueT, InstanceT extends Class<object, unknown[]>, MessageT>
     extends MergeWrapper<Value<ValueT>, Message<MessageT>, Validatable>
 {
     readonly class : InstanceT;

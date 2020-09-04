@@ -1,4 +1,3 @@
 import Instance from "./instance";
-export default function InstanceStandard<InstanceT extends {
-    new (...a: unknown[]): any;
-}, Value = unknown>(value: unknown, instance: InstanceT): Instance<Value, InstanceT, string>;
+import Class from "../class";
+export default function InstanceStandard<InstanceT extends Class<object, unknown[]>, Value = unknown>(value: unknown, instance: InstanceT): Instance<Value, InstanceT, string>;

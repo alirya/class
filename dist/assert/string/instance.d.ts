@@ -1,3 +1,2 @@
-export default function Instance<Instance extends {
-    new (...a: unknown[]): any;
-}>(valid: boolean, value: object, instance: Instance, subject?: string): string;
+import Class from "../../class";
+export default function Instance<Instance extends Class<object, unknown[]>>(valid: boolean, value: object, instance: Instance, subject?: string): string;

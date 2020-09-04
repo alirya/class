@@ -1,6 +1,7 @@
 import InstanceString from "../string/instance";
+import Class from "../../class";
 
-export default function Instance<Instance extends {new(...a:unknown[]): any}>(
+export default function Instance<Instance extends Class<object, unknown[]>>(
     value : object,
     instance : Instance,
     message : (valid:boolean, value:unknown, instance:Instance)=>string = InstanceString,

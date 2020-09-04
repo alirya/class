@@ -4,16 +4,16 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "../boolean/instance", "@dikac/t-function/assert/callback", "./throwable/instance"], factory);
+        define(["require", "exports", "../assert/instance", "../assert/throwable/instance"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    const instance_1 = require("../boolean/instance");
-    const callback_1 = require("@dikac/t-function/assert/callback");
-    const instance_2 = require("./throwable/instance");
+    const instance_1 = require("../assert/instance");
+    const instance_2 = require("../assert/throwable/instance");
     function Instance(value, instance, error = instance_2.default) {
-        callback_1.default(value, instance_1.default, error, instance);
+        instance_1.default(value, instance, error);
+        return value;
     }
     exports.default = Instance;
 });

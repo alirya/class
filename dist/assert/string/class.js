@@ -12,7 +12,7 @@
     const sentences_is_1 = require("@dikac/t-string/message/sentences-is");
     function Class(valid, value, subject = 'type', conversion = value => typeof value) {
         let sentence = sentences_is_1.default(valid);
-        sentence.object.push('string');
+        sentence.object.push('constructor');
         sentence.subject.push(subject);
         if (!valid) {
             sentence.subject.push(conversion(value));

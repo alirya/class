@@ -1,3 +1,2 @@
-export default function Type<Instance extends {
-    new (...a: unknown[]): any;
-}>(value: unknown, instance: Instance, error?: (value: unknown, instance: Instance) => Error): asserts value is Instance;
+import Class from "../class";
+export default function Instance<Instance extends Class<object, unknown[]>>(value: unknown, instance: Instance, error?: (value: unknown, instance: Instance) => Error): asserts value is Instance;

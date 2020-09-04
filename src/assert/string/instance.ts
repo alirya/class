@@ -1,7 +1,8 @@
 import Name from "@dikac/t-object/string/name";
 import SentencesIs from "@dikac/t-string/message/sentences-is";
+import Class from "../../class";
 
-export default function Instance<Instance extends {new(...a:unknown[]): any}>(
+export default function Instance<Instance extends Class<object, unknown[]>>(
     valid : boolean,
     value : object,
     instance : Instance,

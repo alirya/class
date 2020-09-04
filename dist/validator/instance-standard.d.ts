@@ -1,4 +1,3 @@
 import { Interface } from "./instance";
-export default function InstanceStandard<InstanceT extends {
-    new (...a: unknown[]): any;
-}>(instance: InstanceT): Interface<InstanceT, string>;
+import Class from "../class";
+export default function InstanceStandard<InstanceT extends Class<object, unknown[]>>(instance: InstanceT): Interface<InstanceT, string>;
