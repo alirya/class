@@ -1,4 +1,4 @@
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import SentencesMust from "@dikac/t-string/message/sentences-must";
 
 export default function Class(
     valid : boolean,
@@ -7,14 +7,11 @@ export default function Class(
     conversion : (value:unknown)=>string = value=>typeof value
 ) : string {
 
-    let sentence = SentencesIs(valid);
-    sentence.object.push('constructor');
+    let sentence = SentencesMust(valid);
+    sentence.expect.push('constructor');
     sentence.subject.push(subject);
-
-    if(!valid) {
-
-        sentence.subject.push(conversion(value));
-    }
+    sentence.comma.push('expect');
+    sentence.actual.push('actual', conversion(value));
 
     return sentence.message;
 }

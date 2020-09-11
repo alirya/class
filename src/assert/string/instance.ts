@@ -1,5 +1,5 @@
 import Name from "@dikac/t-object/string/name";
-import SentencesIs from "@dikac/t-string/message/sentences-is";
+import Sentences from "@dikac/t-string/message/sentences-must";
 import Class from "../../class";
 
 export default function Instance<Instance extends Class<object, unknown[]>>(
@@ -9,14 +9,12 @@ export default function Instance<Instance extends Class<object, unknown[]>>(
     subject : string = '',
 ) : string {
 
-    const sentence = SentencesIs(
-        valid,
-        [subject, Name(value)],
-        {
-            valid:['is instanceof of'],
-            invalid:['is not instanceof of'],
-        }, [instance.name]
-    );
+    const sentences = Sentences(valid, [subject]);
 
-    return sentence.message;
+    sentences.expect = ['instanceof of', instance.name];
+
+    sentences.comma.push('expect');
+    sentences.actual.push('actual', `"${Name(value)}"`)
+
+    return sentences.message;
 }

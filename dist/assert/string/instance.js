@@ -4,19 +4,19 @@
         if (v !== undefined) module.exports = v;
     }
     else if (typeof define === "function" && define.amd) {
-        define(["require", "exports", "@dikac/t-object/string/name", "@dikac/t-string/message/sentences-is"], factory);
+        define(["require", "exports", "@dikac/t-object/string/name", "@dikac/t-string/message/sentences-must"], factory);
     }
 })(function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     const name_1 = require("@dikac/t-object/string/name");
-    const sentences_is_1 = require("@dikac/t-string/message/sentences-is");
+    const sentences_must_1 = require("@dikac/t-string/message/sentences-must");
     function Instance(valid, value, instance, subject = '') {
-        const sentence = sentences_is_1.default(valid, [subject, name_1.default(value)], {
-            valid: ['is instanceof of'],
-            invalid: ['is not instanceof of'],
-        }, [instance.name]);
-        return sentence.message;
+        const sentences = sentences_must_1.default(valid, [subject]);
+        sentences.expect = ['instanceof of', instance.name];
+        sentences.comma.push('expect');
+        sentences.actual.push('actual', `"${name_1.default(value)}"`);
+        return sentences.message;
     }
     exports.default = Instance;
 });
