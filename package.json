@@ -4,14 +4,14 @@
   "description": "Typescript class",
   "dependencies": {
     "@dikac/deployer": "^0.1.5",
-    "@dikac/t-function": "^0.12.4",
+    "@dikac/t-function": "^0.12.6",
     "@dikac/t-message": "^0.10.4",
-    "@dikac/t-object": "^0.34.0",
+    "@dikac/t-object": "^0.34.2",
     "@dikac/t-string": "^0.14.1",
     "@dikac/t-validatable": "^0.18.9",
-    "@dikac/t-validator": "^0.16.6",
+    "@dikac/t-validator": "^0.16.8",
     "@dikac/t-value": "^0.12.6",
-    "ts-toolbelt": "^6.15.5"
+    "ts-toolbelt": "^8.0.6"
   },
   "devDependencies": {
     "@types/jasmine": "^3.5.14",
@@ -23,11 +23,12 @@
     "npm-run-all": "^4.1.5",
     "rimraf": "^3.0.2",
     "ts-cleaner": "^1.0.5",
-    "typescript": "3.9.7"
+    "typescript": "^4.0.2",
+    "esm": "^3.2.25"
   },
   "scripts": {
-    "spec-run-js": "jasmine --config=./jasmine.json",
-    "spec-run": "jasmine --reporter=jasmine-ts-console-reporter --config=./jasmine.json",
+    "spec-run-js": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json",
+    "spec-run": "node -r esm node_modules/jasmine/bin/jasmine.js --config=./jasmine.json --reporter=jasmine-ts-console-reporter",
     "spec": "npm-run-all spec-compile spec-run",
     "spec-ensure-directory": "mkdirp dist-spec",
     "spec-compile": "npm-run-all spec-compile-script spec-cleanup",

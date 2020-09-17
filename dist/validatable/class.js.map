@@ -1,1 +1,1 @@
-{"version":3,"file":"class.js","sourceRoot":"","sources":["../../src/validatable/class.ts"],"names":[],"mappings":";;;;;;;;;;;IAAA,wFAAwE;IACxE,4CAA0C;IAM1C,SAAwB,KAAK,CACzB,KAAgB,EAChB,OAAoE;QAGpE,OAAkF,2BAAQ,CAAC,KAAK,EAAE,eAAU,EAAE,OAAO,CAAC,CAAC;IAC3H,CAAC;IAND,wBAMC"}
+{"version":3,"file":"class.js","sourceRoot":"","sources":["../../src/validatable/class.ts"],"names":[],"mappings":"AAAA,OAAO,QAAQ,MAAM,kDAAkD,CAAC;AACxE,OAAO,UAAU,MAAM,kBAAkB,CAAC;AAM1C,MAAM,CAAC,OAAO,UAAU,KAAK,CACzB,KAAgB,EAChB,OAAoE;IAGpE,OAAkF,QAAQ,CAAC,KAAK,EAAE,UAAU,EAAE,OAAO,CAAC,CAAC;AAC3H,CAAC"}
