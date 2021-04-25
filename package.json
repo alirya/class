@@ -1,6 +1,6 @@
 {
   "name": "@dikac/t-class",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Typescript class",
   "dependencies": {
     "@dikac/t-function": "^0.14.1",
