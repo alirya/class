@@ -6,7 +6,7 @@ export default function Instance<
 >(
     value : unknown,
     instance : InstanceT
-) : value is Class.InstanceOf<InstanceT> {
+) : value is Class.Instance<InstanceT> {
 
     return value instanceof instance;
 }
