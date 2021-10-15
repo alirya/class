@@ -1,12 +1,14 @@
-import Instance, {Interface} from "./instance";
+import Instance from "./instance";
 import StringInstance from "../validatable/string/instance";
 import Class from "../class";
+import Validator from "@dikac/t-validator/simple";
+import InstanceofValidatable from "../validatable/instance";
 
 export default function InstanceStandard<
     InstanceT extends Class<object, unknown[]>
 >(
     instance : InstanceT
-) : Interface<InstanceT, string> {
+) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, string>>  {
 
-    return <Interface<InstanceT, string>> new Instance(instance, StringInstance)
+    return  Instance(instance, StringInstance)
 }

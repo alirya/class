@@ -5,30 +5,17 @@ import Return from "@dikac/t-validator/validatable/simple";
 import Replace from "@dikac/t-validatable/boolean/replace";
 import Class from "../class";
 
-
-export type Interface<
+export default function Instanceof<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
-> = Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>> &
-    Message<(result:Omit<Return<any, any, InstanceT>, 'message'>)=>MessageT>
+>(
+    instance : InstanceT,
+    message : (result:Omit<Return<any, any, InstanceT>, 'message'>)=>MessageT,
+) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>> {
 
+    return function<Type extends InstanceT, Argument extends any>(value: Type|Argument) {
 
-export default class Instanceof<
-    InstanceT extends Class<object, unknown[]> = Class<object, unknown[]>,
-    MessageT = unknown
->
-    implements Interface<InstanceT, MessageT>
-{
-    constructor(
-        public instance : InstanceT,
-        public message : (result:Omit<Return<any, any, InstanceT>, 'message'>)=>MessageT,
-    ) {
-    }
+        return <Return<any, Argument, InstanceT, InstanceofValidatable<Argument, InstanceT, MessageT>>> new InstanceofValidatable(value, instance, message);
 
-    validate<Argument extends InstanceT>(value: Argument): Replace<InstanceofValidatable<Argument, InstanceT, MessageT>, true>
-    validate<Argument extends any>(value: Argument): Return<any, Argument, InstanceT, InstanceofValidatable<Argument, InstanceT, MessageT>>
-    validate<Argument extends any>(value: Argument) {
-
-        return <Return<any, Argument, InstanceT, InstanceofValidatable<Argument, InstanceT, MessageT>>> new InstanceofValidatable(value, this.instance, this.message);
-    }
+    } as Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
 }

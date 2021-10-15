@@ -1,10 +1,7 @@
 import ClassValidatable from "../validatable/class";
-export default class Class {
-    constructor(message) {
-        this.message = message;
-    }
-    validate(value) {
-        return ClassValidatable(value, this.message);
-    }
+export default function Class(message) {
+    return function (value) {
+        return ClassValidatable(value, message);
+    };
 }
 //# sourceMappingURL=class.js.map

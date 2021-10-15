@@ -6,21 +6,13 @@ import ClassValidatable from "../validatable/class";
 import Instance from "@dikac/t-validator/validatable/validatable";
 import Return from "@dikac/t-validator/validatable/simple";
 
-export default class Class<MessageT>
-    implements
-        Validator<unknown, string, Readonly<Instance<unknown, MessageT>>>,
-        Message<(result:Readonly<Value & Validatable>)=>MessageT>
-{
+export default function Class<MessageT>(
+    message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
+) : Validator<unknown, string, Readonly<Instance<unknown, MessageT>>> {
 
-    constructor(
-       public message : (result:Readonly<Value> & Readonly<Validatable>)=>MessageT
-    ) {
-    }
+    return function<Argument extends unknown, Match extends string>(value : Argument|Match) {
 
-    validate<Argument extends string>(value: Argument): Readonly<Instance<Argument, MessageT, true>>
-    validate<Argument extends unknown>(value: Argument): Return<unknown, Argument, string, Readonly<Instance<unknown, MessageT>>>
-    validate<Argument extends unknown>(value: Argument) {
+        return  ClassValidatable(value, message);
 
-        return  ClassValidatable(value, this.message);
-    }
+    } as Validator<unknown, string, Readonly<Instance<unknown, MessageT>>>
 }
