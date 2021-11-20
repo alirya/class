@@ -1,6 +1,6 @@
 import Guard from "../boolean/class";
-import Callback from "@dikac/t-function/assert/callback";
-import ClassError from "./throwable/class";
+import Callback from "@dikac/t-function/assert/callback-parameters";
+import ClassError from "./throwable/class-parameters";
 import ClassInterface from "../class";
 
 export default function Class<Instance extends ClassInterface<object, unknown[]>>(

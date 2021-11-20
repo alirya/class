@@ -1,17 +1,14 @@
-import SentencesMust from "@dikac/t-string/message/sentences-must";
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
 
-export default function Class(
-    valid : boolean,
-    value : unknown,
-    subject : string = 'type',
-    conversion : (value:unknown)=>string = value=>typeof value
-) : string {
+/**
+ *  validate if array is Class
+ */
 
-    let sentence = SentencesMust(valid);
-    sentence.expect.push('constructor');
-    sentence.subject.push(subject);
-    sentence.comma.push('expect');
-    sentence.actual.push('actual', conversion(value));
+namespace Class {
 
-    return sentence.message;
+    export const Parameter = ClassParameter;
+    export const Parameters = ClassParameters;
 }
+
+export default Class;

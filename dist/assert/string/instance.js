@@ -1,10 +1,12 @@
-import Name from "@dikac/t-object/string/name";
-import Sentences from "@dikac/t-string/message/sentences-must";
-export default function Instance(valid, value, instance, subject = '') {
-    const sentences = Sentences(valid, [subject]);
-    sentences.expect = ['instanceof of', instance.name];
-    sentences.comma.push('expect');
-    sentences.actual.push('actual', `"${Name(value)}"`);
-    return sentences.message;
-}
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
+/**
+ *  validate if array is Instance
+ */
+var Instance;
+(function (Instance) {
+    Instance.Parameter = InstanceParameter;
+    Instance.Parameters = InstanceParameters;
+})(Instance || (Instance = {}));
+export default Instance;
 //# sourceMappingURL=instance.js.map

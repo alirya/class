@@ -1,7 +1,12 @@
-import Guard from "../boolean/instance";
-import Callback from "@dikac/t-function/assert/callback";
-import InstanceError from "./throwable/instance";
-export default function Instance(value, instance, error = InstanceError) {
-    Callback(value, Guard, error, instance);
-}
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
+/**
+ *  validate if array is Instance
+ */
+var Instance;
+(function (Instance) {
+    Instance.Parameter = InstanceParameter;
+    Instance.Parameters = InstanceParameters;
+})(Instance || (Instance = {}));
+export default Instance;
 //# sourceMappingURL=instance.js.map

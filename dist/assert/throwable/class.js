@@ -1,5 +1,12 @@
-import ClassType from "../string/class";
-export default function Class(string, subject = 'type', conversion = value => typeof value) {
-    return new Error(ClassType(false, string, subject, conversion));
-}
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
+/**
+ *  validate if array is Class
+ */
+var Class;
+(function (Class) {
+    Class.Parameter = ClassParameter;
+    Class.Parameters = ClassParameters;
+})(Class || (Class = {}));
+export default Class;
 //# sourceMappingURL=class.js.map

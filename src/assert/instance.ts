@@ -1,13 +1,14 @@
-import Guard from "../boolean/instance";
-import Callback from "@dikac/t-function/assert/callback";
-import InstanceError from "./throwable/instance";
-import Class from "../class";
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
 
-export default function Instance<Instance extends Class<object, unknown[]>>(
-    value : unknown,
-    instance : Instance,
-    error : (value:unknown, instance:Instance)=>Error = InstanceError
-) : asserts value is Instance {
+/**
+ *  validate if array is Instance
+ */
 
-    Callback(value, Guard, error, instance);
+namespace Instance {
+
+    export const Parameter = InstanceParameter;
+    export const Parameters = InstanceParameters;
 }
+
+export default Instance;

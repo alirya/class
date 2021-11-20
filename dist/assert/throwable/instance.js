@@ -1,5 +1,12 @@
-import InstanceString from "../string/instance";
-export default function Instance(value, instance, message = InstanceString, error = (v) => new Error(v)) {
-    return error(message(false, value, instance));
-}
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
+/**
+ *  validate if array is Instance
+ */
+var Instance;
+(function (Instance) {
+    Instance.Parameter = InstanceParameter;
+    Instance.Parameters = InstanceParameters;
+})(Instance || (Instance = {}));
+export default Instance;
 //# sourceMappingURL=instance.js.map

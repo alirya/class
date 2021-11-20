@@ -1,15 +1,12 @@
-import MergeWrapper from "@dikac/t-validator/validatable/readonly-merge";
-import MessageCallback from "@dikac/t-validator/validatable/callback-function";
-import InstanceBoolean from "../value/boolean/instance";
-export default class Instance extends MergeWrapper {
-    constructor(value, class_, message) {
-        let container = {
-            class: class_,
-            value: value,
-        };
-        let msg = MessageCallback(container, InstanceBoolean, () => message(this));
-        super(container, msg, msg);
-        this.class = class_;
-    }
-}
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
+/**
+ *  validate if array is Instance
+ */
+var Instance;
+(function (Instance) {
+    Instance.Parameter = InstanceParameter;
+    Instance.Parameters = InstanceParameters;
+})(Instance || (Instance = {}));
+export default Instance;
 //# sourceMappingURL=instance.js.map

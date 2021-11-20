@@ -1,12 +1,14 @@
-import InstanceString from "../string/instance";
-import Class from "../../class";
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
 
-export default function Instance<Instance extends Class<object, unknown[]>>(
-    value : object,
-    instance : Instance,
-    message : (valid:boolean, value:unknown, instance:Instance)=>string = InstanceString,
-    error : (message:string)=>Error = (v)=>new Error(v),
-) : Error {
+/**
+ *  validate if array is Instance
+ */
 
-    return error(message(false, value, instance));
+namespace Instance {
+
+    export const Parameter = InstanceParameter;
+    export const Parameters = InstanceParameters;
 }
+
+export default Instance;

@@ -1,2 +1,10 @@
-import Class from "../../class";
-export default function Instance<Instance extends Class<object, unknown[]>>(valid: boolean, value: object, instance: Instance, subject?: string): string;
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
+/**
+ *  validate if array is Instance
+ */
+declare namespace Instance {
+    const Parameter: typeof InstanceParameter;
+    const Parameters: typeof InstanceParameters;
+}
+export default Instance;

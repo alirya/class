@@ -1,5 +1,10 @@
-import Validator from "@dikac/t-validator/simple";
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-import Instance from "@dikac/t-validator/validatable/validatable";
-export default function Class<MessageT>(message: (result: Readonly<Value> & Readonly<Validatable>) => MessageT): Validator<unknown, string, Readonly<Instance<unknown, MessageT>>>;
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
+/**
+ *  validate if array is Class
+ */
+declare namespace Class {
+    const Parameter: typeof ClassParameter;
+    const Parameters: typeof ClassParameters;
+}
+export default Class;

@@ -1,14 +1,14 @@
-import Callback from "@dikac/t-validator/validatable/callback-function";
-import ClassGuard from "../boolean/class";
-import Validatable from "@dikac/t-validatable/validatable";
-import Value from "@dikac/t-value/value";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
 
-export default function Class<MessageT, Argument>(
-    value : Argument,
-    message : (result:Readonly<Value<Argument> & Validatable>)=>MessageT
-) : Return<unknown, Argument, string, Readonly<Instance<unknown, MessageT>>> {
+/**
+ *  validate if array is Class
+ */
 
-    return <Return<unknown, Argument, string, Readonly<Instance<unknown, MessageT>>>> Callback(value, ClassGuard, message);
+namespace Class {
+
+    export const Parameter = ClassParameter;
+    export const Parameters = ClassParameters;
 }
+
+export default Class;

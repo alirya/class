@@ -1,10 +1,12 @@
-import SentencesMust from "@dikac/t-string/message/sentences-must";
-export default function Class(valid, value, subject = 'type', conversion = value => typeof value) {
-    let sentence = SentencesMust(valid);
-    sentence.expect.push('constructor');
-    sentence.subject.push(subject);
-    sentence.comma.push('expect');
-    sentence.actual.push('actual', conversion(value));
-    return sentence.message;
-}
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
+/**
+ *  validate if array is Class
+ */
+var Class;
+(function (Class) {
+    Class.Parameter = ClassParameter;
+    Class.Parameters = ClassParameters;
+})(Class || (Class = {}));
+export default Class;
 //# sourceMappingURL=class.js.map

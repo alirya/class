@@ -1,21 +1,14 @@
-import Validator from "@dikac/t-validator/simple";
-import Message from "@dikac/t-message/message";
-import InstanceofValidatable from "../validatable/instance";
-import Return from "@dikac/t-validator/validatable/simple";
-import Replace from "@dikac/t-validatable/boolean/replace";
-import Class from "../class";
+import InstanceParameter from "./instance-parameter";
+import InstanceParameters from "./instance-parameters";
 
-export default function Instanceof<
-    InstanceT extends Class<object, unknown[]>,
-    MessageT = unknown
->(
-    instance : InstanceT,
-    message : (result:Omit<Return<any, any, InstanceT>, 'message'>)=>MessageT,
-) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>> {
+/**
+ *  validate if array is Instance
+ */
 
-    return function<Type extends InstanceT, Argument extends any>(value: Type|Argument) {
+namespace Instance {
 
-        return <Return<any, Argument, InstanceT, InstanceofValidatable<Argument, InstanceT, MessageT>>> new InstanceofValidatable(value, instance, message);
-
-    } as Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
+    export const Parameter = InstanceParameter;
+    export const Parameters = InstanceParameters;
 }
+
+export default Instance;

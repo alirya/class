@@ -4,7 +4,7 @@ it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 
 it('true', ()=>{
 
-    expect(Class(true, {}, 'value')).toBe(
+    expect(Class.Parameters( {}, true, 'value')).toBe(
         'value is constructor.'
     );
 
@@ -12,7 +12,7 @@ it('true', ()=>{
 
 it('false', ()=>{
 
-    expect(Class(false, {}, 'value')).toBe(
+    expect(Class.Parameters( {}, false, 'value')).toBe(
         'value must constructor, actual object.'
     );
 

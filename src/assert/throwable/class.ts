@@ -1,10 +1,14 @@
-import ClassType from "../string/class";
+import ClassParameter from "./class-parameter";
+import ClassParameters from "./class-parameters";
 
-export default function Class(
-    string : unknown,
-    subject : string = 'type',
-    conversion : (value:unknown)=>string = value=>typeof value
-) : Error {
+/**
+ *  validate if array is Class
+ */
 
-    return new Error(ClassType(false, string, subject, conversion))
+namespace Class {
+
+    export const Parameter = ClassParameter;
+    export const Parameters = ClassParameters;
 }
+
+export default Class;
