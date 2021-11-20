@@ -5,14 +5,29 @@ import Return from "@dikac/t-validator/validatable/simple";
 import Replace from "@dikac/t-validatable/boolean/replace";
 import Class from "../class";
 import DynamicParameters from "@dikac/t-validator/message/function/dynamic-parameters";
+import StringInstance from "../assert/string/instance-parameters";
+
+export default function InstanceParameters<
+    InstanceT extends Class<object, unknown[]>,
+    MessageT = unknown
+    >(
+    instance : InstanceT,
+    message : DynamicParameters<InstanceT, MessageT, [InstanceT]>,
+) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>;
+
+export default function InstanceParameters<
+    InstanceT extends Class<object, unknown[]>,
+    >(
+    instance : InstanceT,
+) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, string>>;
 
 export default function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
 >(
     instance : InstanceT,
-    message : DynamicParameters<InstanceT, MessageT>,
-) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>> {
+    message : DynamicParameters<InstanceT, MessageT|string, [InstanceT]> = StringInstance,
+) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT|string>> {
 
     return function<Type extends InstanceT, Argument extends any>(value: Type|Argument) {
 
