@@ -1,4 +1,3 @@
-import ClassType from "../string/class-parameters";
 import Value from "@dikac/t-value/value";
 import ClassParameters from "./class-parameters";
 

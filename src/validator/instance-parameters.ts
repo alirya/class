@@ -1,10 +1,8 @@
 import Validator from "@dikac/t-validator/simple";
-import Message from "@dikac/t-message/message";
 import InstanceofValidatable from "../validatable/instance-parameters";
 import Return from "@dikac/t-validator/validatable/simple";
-import Replace from "@dikac/t-validatable/boolean/replace";
 import Class from "../class";
-import DynamicParameters from "@dikac/t-validator/message/function/dynamic-parameters";
+import DynamicParameters from "@dikac/t-validator/message/function/validatable-parameters";
 import StringInstance from "../assert/string/instance-parameters";
 
 export default function InstanceParameters<
@@ -13,13 +11,13 @@ export default function InstanceParameters<
     >(
     instance : InstanceT,
     message : DynamicParameters<InstanceT, MessageT, [InstanceT]>,
-) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>;
+) : Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>;
 
 export default function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
     >(
     instance : InstanceT,
-) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, string>>;
+) : Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, string>>;
 
 export default function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
@@ -27,11 +25,11 @@ export default function InstanceParameters<
 >(
     instance : InstanceT,
     message : DynamicParameters<InstanceT, MessageT|string, [InstanceT]> = StringInstance,
-) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT|string>> {
+) : Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, MessageT|string>> {
 
-    return function<Type extends InstanceT, Argument extends any>(value: Type|Argument) {
+    return function(value) {
 
-        return <Return<any, Argument, InstanceT, InstanceofValidatable<Argument, InstanceT, MessageT>>> new InstanceofValidatable(value, instance, message);
+        return <Return<unknown, InstanceT, InstanceofValidatable<object, InstanceT, MessageT>>> new InstanceofValidatable(value, instance, message);
 
-    } as Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
+    } as Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
 }

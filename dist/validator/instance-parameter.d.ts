@@ -3,7 +3,7 @@ import Message from "@dikac/t-message/message";
 import InstanceofValidatable from "../validatable/instance-parameters";
 import Class from "../class";
 import ClassContainer from "../class/class";
-import DynamicParameter from "@dikac/t-validator/message/function/dynamic-parameter";
+import DynamicParameter from "@dikac/t-validator/message/function/validatable-parameter";
 import Value from "@dikac/t-value/value";
 export declare type InstanceArgumentValue<InstanceT extends Class<object, unknown[]>, MessageT = unknown> = Value<InstanceT> & Message<DynamicParameter<InstanceT, MessageT>>;
 export declare type InstanceArgumentClass<InstanceT extends Class<object, unknown[]>, MessageT = unknown> = ClassContainer<InstanceT> & Message<DynamicParameter<InstanceT, MessageT>>;
