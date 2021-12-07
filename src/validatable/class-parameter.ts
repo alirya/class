@@ -6,8 +6,6 @@ import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
 import ClassParameters from "./class-parameters";
 
 export default function ClassParameter<MessageT, Argument>(
-    // value : Argument,
-    // message : (result:Readonly<Value<Argument> & Validatable>)=>MessageT,
     {
         value,
         message,

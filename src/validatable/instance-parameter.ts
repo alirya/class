@@ -15,22 +15,10 @@ export default class InstanceParameter<ValueT, InstanceT extends Class<object, u
     readonly class : InstanceT;
 
     constructor(
-        // value : ValueT,
-        // class_ : InstanceT,
-        // message : DynamicParameter<ValueT, MessageT, Dynamic<ValueT> & ClassInterface<InstanceT>>,
-        argument/* = {
-            value,
-            class,
-            message,
-        }*/ : Value<ValueT> &
+        argument : Value<ValueT> &
             Message<DynamicParameter<ValueT, MessageT, Dynamic<ValueT> & ClassInterface<InstanceT>>> &
             ClassInterface<InstanceT>
     ) {
-
-        // let container : Value<ValueT> & ClassInterface<InstanceT> = {
-        //      class: argument.class,
-        //      value: argument.value,
-        // };
 
         let msg = MessageCallback(argument, InstanceBoolean, ()=>argument.message(this));
 

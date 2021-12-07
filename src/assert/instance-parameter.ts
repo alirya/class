@@ -4,10 +4,7 @@ import InstanceParameters from "./instance-parameters";
 
 export default function InstanceParameter<Instance extends Class<object, unknown[]>>(
     value : unknown,
-    //instance : Instance,
-    //error : (value:unknown, instance:Instance)=>Error = InstanceError,
     {
-        // value,
         instance,
         error,
     } : Value & {

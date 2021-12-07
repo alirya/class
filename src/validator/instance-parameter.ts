@@ -21,8 +21,6 @@ export default function InstanceParameter<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
     >(
-    //instance : InstanceT,
-    //message : DynamicParameter<InstanceT, MessageT>,
     argument : InstanceArgumentClass<InstanceT, MessageT>
 ) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
 
@@ -30,8 +28,6 @@ export default function InstanceParameter<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
     >(
-    //instance : InstanceT,
-    //message : DynamicParameter<InstanceT, MessageT>,
     {
         value,
         message,
@@ -42,8 +38,6 @@ export default function InstanceParameter<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
 >(
-    //instance : InstanceT,
-    //message : DynamicParameter<InstanceT, MessageT>,
     argument : InstanceArgumentValue<InstanceT, MessageT> & InstanceArgumentClass<InstanceT, MessageT>
 ) : Validator<any, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>> {
 
