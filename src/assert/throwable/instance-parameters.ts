@@ -1,7 +1,5 @@
 import InstanceString from "../string/instance-parameters";
 import Class from "../../class";
-import Value from "@dikac/t-value/value";
-import Message from "@dikac/t-message/message";
 
 
 export default function InstanceParameters<Instance extends Class<object, unknown[]>>(

@@ -1,4 +1,3 @@
-import Name from "@dikac/t-object/string/name";
 import Class from "../../class";
 import InstanceParameters from "./instance-parameters";
 import Value from "@dikac/t-value/value";
