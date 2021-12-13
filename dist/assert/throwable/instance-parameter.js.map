@@ -1,1 +1,0 @@
-{"version":3,"file":"instance-parameter.js","sourceRoot":"","sources":["../../../src/assert/throwable/instance-parameter.ts"],"names":[],"mappings":"AAGA,OAAO,kBAAkB,MAAM,uBAAuB,CAAC;AAEvD,MAAM,CAAC,OAAO,UAAU,iBAAiB,CACrC,EACI,KAAK,EACL,QAAQ,EACR,OAAO,EACP,KAAK,GAIR;IAGD,OAAO,kBAAkB,CAAC,KAAK,EAAE,QAAQ,EAAE,OAAO,EAAE,KAAK,CAAC,CAAC;AAC/D,CAAC"}
