@@ -6,8 +6,8 @@ import MessageCallback from "@dikac/t-validator/validatable/callback-function-pa
 import InstanceBoolean from "../value/boolean/instance";
 import ClassInterface from "../class/class";
 import Class from "../class";
-import DynamicParameter from "@dikac/t-validator/message/function/dynamic-parameter";
-import Dynamic from "@dikac/t-validator/value/dynamic";
+import DynamicParameter from "@dikac/t-validator/message/function/validatable-parameter";
+import Dynamic from "@dikac/t-validator/value/validatable";
 
 export default class InstanceParameter<ValueT, InstanceT extends Class<object, unknown[]>, MessageT>
     extends MergeWrapper<Value<ValueT>, Message<MessageT>, Validatable>

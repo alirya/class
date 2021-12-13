@@ -1,5 +1,5 @@
 import Class from "../class";
-import DynamicParameters from "@dikac/t-validator/message/function/dynamic-parameters";
+import DynamicParameters from "@dikac/t-validator/message/function/validatable-parameters";
 import InstanceParameter from "./instance-parameter";
 
 export default class InstanceParameters<ValueT, InstanceT extends Class<object, unknown[]>, MessageT>
