@@ -1,7 +1,7 @@
-import Guard from "../boolean/instance";
-import Callback from "@alirya/function/assert/callback-parameters";
-import InstanceError from "./throwable/instance-parameters";
-import Class from "../class";
+import Guard from '../boolean/instance';
+import Callback from '@alirya/function/assert/callback-parameters';
+import InstanceError from './throwable/instance-parameters';
+import Class from '../class';
 
 export default function InstanceParameters<Instance extends Class<object, unknown[]>>(
     value : unknown,

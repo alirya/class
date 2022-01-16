@@ -1,6 +1,6 @@
-import Class from "../../../dist/boolean/class";
+import Class from '../../../dist/boolean/class';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
 describe('basic', ()=>{
@@ -18,4 +18,4 @@ describe('basic', ()=>{
     }
 
 
-})
+});

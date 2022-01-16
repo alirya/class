@@ -1,7 +1,7 @@
-import Validator from "@alirya/validator/simple";
-import ClassValidatable from "../validatable/class-parameters";
-import Instance from "@alirya/validator/validatable/validatable";
-import DynamicParameters from "@alirya/validator/message/function/validatable-parameters";
+import Validator from '@alirya/validator/simple';
+import ClassValidatable from '../validatable/class-parameters';
+import Instance from '@alirya/validator/validatable/validatable';
+import DynamicParameters from '@alirya/validator/message/function/validatable-parameters';
 
 export default function ClassParameters<MessageT>(
     message : DynamicParameters<unknown, MessageT>,
@@ -11,5 +11,5 @@ export default function ClassParameters<MessageT>(
 
         return  ClassValidatable(value, message);
 
-    } as Validator<unknown, string, Readonly<Instance<unknown, MessageT>>>
+    } as Validator<unknown, string, Readonly<Instance<unknown, MessageT>>>;
 }

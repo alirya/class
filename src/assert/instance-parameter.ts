@@ -1,6 +1,6 @@
-import Class from "../class";
-import Value from "@alirya/value/value";
-import InstanceParameters from "./instance-parameters";
+import Class from '../class';
+import Value from '@alirya/value/value';
+import InstanceParameters from './instance-parameters';
 
 export default function InstanceParameter<Instance extends Class<object, unknown[]>>(
     value : unknown,

@@ -1,6 +1,6 @@
-import Instance from "../../../dist/assert/string/instance-parameters";
+import Instance from '../../../dist/assert/string/instance-parameters';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true', ()=>{
 

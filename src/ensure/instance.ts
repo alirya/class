@@ -1,6 +1,6 @@
-import Assert from "../assert/instance-parameters";
-import StringError from "../assert/throwable/instance-parameters";
-import Class from "../class";
+import Assert from '../assert/instance-parameters';
+import StringError from '../assert/throwable/instance-parameters';
+import Class from '../class';
 
 export default function Instance<Instance extends Class<object, unknown[]>>(
     value : unknown,

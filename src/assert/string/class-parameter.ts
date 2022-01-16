@@ -1,6 +1,6 @@
-import ClassParameters from "./class-parameters";
-import Value from "@alirya/value/value";
-import Validatable from "@alirya/validatable/validatable";
+import ClassParameters from './class-parameters';
+import Value from '@alirya/value/value';
+import Validatable from '@alirya/validatable/validatable';
 
 export default function ClassParameter(
     {

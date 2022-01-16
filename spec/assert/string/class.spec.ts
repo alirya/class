@@ -1,6 +1,6 @@
-import Class from "../../../dist/assert/string/class";
+import Class from '../../../dist/assert/string/class';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('true', ()=>{
 

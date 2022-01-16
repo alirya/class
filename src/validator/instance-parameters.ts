@@ -1,9 +1,9 @@
-import Validator from "@alirya/validator/simple";
-import InstanceofValidatable from "../validatable/instance-parameters";
-import Return from "@alirya/validator/validatable/simple";
-import Class from "../class";
-import DynamicParameters from "@alirya/validator/message/function/validatable-parameters";
-import StringInstance from "../assert/string/instance-parameters";
+import Validator from '@alirya/validator/simple';
+import InstanceofValidatable from '../validatable/instance-parameters';
+import Return from '@alirya/validator/validatable/simple';
+import Class from '../class';
+import DynamicParameters from '@alirya/validator/message/function/validatable-parameters';
+import StringInstance from '../assert/string/instance-parameters';
 
 export default function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
@@ -31,5 +31,5 @@ export default function InstanceParameters<
 
         return <Return<unknown, InstanceT, InstanceofValidatable<object, InstanceT, MessageT>>> new InstanceofValidatable(value, instance, message);
 
-    } as Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>
+    } as Validator<unknown, InstanceT, InstanceofValidatable<any, InstanceT, MessageT>>;
 }

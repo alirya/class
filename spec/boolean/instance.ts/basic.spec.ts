@@ -1,8 +1,8 @@
-import Instance from "../../../dist/boolean/instance";
+import Instance from '../../../dist/boolean/instance';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     it(`true`, () => {
         expect(Instance(new Boolean(true), Boolean)).toBeTrue();
@@ -14,7 +14,7 @@ describe("boolean", function() {
 
 });
 
-describe("string", function() {
+describe('string', function() {
 
     it(`primitive`, () => {
         expect(Instance(new String('str'), String)).toBeTrue();
@@ -27,7 +27,7 @@ describe("string", function() {
 });
 
 
-describe("number", function() {
+describe('number', function() {
 
     it(`primitive`, () => {
         expect(Instance(new Number(1), Number)).toBeTrue();
@@ -39,7 +39,7 @@ describe("number", function() {
 
 });
 
-describe("object", function() {
+describe('object', function() {
 
     it(`plain`, () => {
         expect(Instance({}, Object)).toBeTrue();
@@ -51,7 +51,7 @@ describe("object", function() {
 
 });
 
-describe("function", function() {
+describe('function', function() {
 
     it(`anonymous `, () => {
         expect(Instance(function () {}, Function)).toBeTrue();
@@ -67,7 +67,7 @@ describe("function", function() {
 
 });
 
-describe("empty", function() {
+describe('empty', function() {
 
     it(`null `, () => {
         expect(Instance(null, Object)).toBeFalse();

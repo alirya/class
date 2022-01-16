@@ -18,11 +18,11 @@ export default function ClassParameters(
         strings.push('must');
     }
 
-    strings.push('constructor')
+    strings.push('constructor');
 
     if(!valid) {
 
-        strings[2] = `${strings[2]},`
+        strings[2] = `${strings[2]},`;
 
         strings.push('actual', conversion(value));
     }

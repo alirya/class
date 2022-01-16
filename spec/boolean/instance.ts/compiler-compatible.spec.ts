@@ -1,8 +1,8 @@
-import Instance from "../../../dist/boolean/instance";
+import Instance from '../../../dist/boolean/instance';
 
-it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
+it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe("boolean", function() {
+describe('boolean', function() {
 
     let value : unknown = true;
 
@@ -21,7 +21,7 @@ describe("boolean", function() {
     }
 });
 
-describe("object", function() {
+describe('object', function() {
 
     let value : unknown = {};
 
@@ -36,7 +36,7 @@ describe("object", function() {
     }
 });
 
-describe("string", function() {
+describe('string', function() {
 
     let value : unknown = 'str';
 
@@ -52,7 +52,7 @@ describe("string", function() {
 });
 
 
-describe("number", function() {
+describe('number', function() {
 
     let value : unknown = 1;
 
@@ -67,7 +67,7 @@ describe("number", function() {
     }
 });
 
-describe("function", function() {
+describe('function', function() {
 
     let value : unknown = ()=>null;
 

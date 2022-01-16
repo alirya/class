@@ -1,5 +1,5 @@
-import Value from "@alirya/value/value";
-import ClassParameters from "./class-parameters";
+import Value from '@alirya/value/value';
+import ClassParameters from './class-parameters';
 
 export default function ClassParameter(
     {

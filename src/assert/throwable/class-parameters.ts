@@ -1,4 +1,4 @@
-import ClassType from "../string/class-parameters";
+import ClassType from '../string/class-parameters';
 
 export default function ClassParameters(
     string : unknown,
@@ -6,5 +6,5 @@ export default function ClassParameters(
     conversion : (value:unknown)=>string = value=>typeof value
 ) : Error {
 
-    return new Error(ClassType(string, false, subject, conversion))
+    return new Error(ClassType(string, false, subject, conversion));
 }

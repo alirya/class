@@ -1,5 +1,5 @@
-import Name from "@alirya/object/string/name";
-import Class from "../../class";
+import Name from '@alirya/object/string/name';
+import Class from '../../class';
 
 export default function InstanceParameters<Instance extends Class<object, unknown[]>>(
     value : object,
@@ -25,9 +25,9 @@ export default function InstanceParameters<Instance extends Class<object, unknow
 
     if(!valid) {
 
-        strings[3] = `${strings[3]},`
+        strings[3] = `${strings[3]},`;
 
-        strings.push('actual', `"${Name(value)}"`)
+        strings.push('actual', `"${Name(value)}"`);
     }
 
     return strings.join(' ') + '.';

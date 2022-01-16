@@ -1,5 +1,5 @@
-import InstanceString from "../string/instance-parameters";
-import Class from "../../class";
+import InstanceString from '../string/instance-parameters';
+import Class from '../../class';
 
 
 export default function InstanceParameters<Instance extends Class<object, unknown[]>>(
