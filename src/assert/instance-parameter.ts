@@ -1,5 +1,5 @@
 import Class from "../class";
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import InstanceParameters from "./instance-parameters";
 
 export default function InstanceParameter<Instance extends Class<object, unknown[]>>(

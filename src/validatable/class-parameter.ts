@@ -1,8 +1,8 @@
-import Value from "@dikac/t-value/value";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import Message from "@dikac/t-message/message";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameter";
+import Value from "@alirya/value/value";
+import Return from "@alirya/validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import Message from "@alirya/message/message";
+import Dynamic from "@alirya/validator/message/function/validatable-parameter";
 import ClassParameters from "./class-parameters";
 
 export default function ClassParameter<MessageT, Argument>(

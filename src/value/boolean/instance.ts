@@ -1,4 +1,4 @@
-import Value from "@dikac/t-value/value";
+import Value from "@alirya/value/value";
 import BooleanInstance from "../../boolean/instance";
 import ClassContainer from "../../class/class";
 import Class from "../../class";

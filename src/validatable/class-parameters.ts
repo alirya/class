@@ -1,8 +1,8 @@
-import Callback from "@dikac/t-validator/validatable/callback-function-parameters";
+import Callback from "@alirya/validator/validatable/callback-function-parameters";
 import ClassGuard from "../boolean/class";
-import Return from "@dikac/t-validator/validatable/simple";
-import Instance from "@dikac/t-validator/validatable/validatable";
-import Dynamic from "@dikac/t-validator/message/function/validatable-parameters";
+import Return from "@alirya/validator/validatable/simple";
+import Instance from "@alirya/validator/validatable/validatable";
+import Dynamic from "@alirya/validator/message/function/validatable-parameters";
 
 export default function ClassParameters<MessageT, Argument>(
     value : Argument,

@@ -1,5 +1,5 @@
 import Guard from "../boolean/class";
-import Callback from "@dikac/t-function/assert/callback-parameters";
+import Callback from "@alirya/function/assert/callback-parameters";
 import ClassError from "./throwable/class-parameters";
 import ClassInterface from "../class";
 

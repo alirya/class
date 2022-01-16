@@ -13,10 +13,10 @@ describe("boolean", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let result : Boolean  = value;
 
-        // @ts-expect-error
+        // @ts-expecerror
         let boolean : boolean  = value.valueOf();
     }
 });
@@ -31,7 +31,7 @@ describe("object", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let result : object = value;
     }
 });
@@ -46,7 +46,7 @@ describe("string", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let result : String = value;
     }
 });
@@ -62,7 +62,7 @@ describe("number", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let result : Number = value;
     }
 });
@@ -77,7 +77,7 @@ describe("function", function() {
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         let result : Function = value;
     }
 });

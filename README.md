@@ -1,2 +1,2 @@
-# t-class
+# class
 typescipt class

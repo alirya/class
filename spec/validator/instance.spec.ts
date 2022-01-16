@@ -18,7 +18,7 @@
 //
 //             } else {
 //
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let string : StringConstructor = validatable.value;
 //             }
 //
@@ -35,7 +35,7 @@
 //
 //             } else {
 //
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let string : StringConstructor = validatable.value;
 //             }
 //
@@ -58,14 +58,14 @@
 //             if(validatable.valid) {
 //
 //                 let string : {new(data):Test}  = validatable.value;
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let instance : Test = validatable.value;
 //
 //             } else {
 //
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let string : {new(data):Test}  = validatable.value;
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let instance : Test = validatable.value;
 //             }
 //
@@ -78,15 +78,15 @@
 //
 //             if(validatable.valid) {
 //
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let instance : Test = validatable.value;
 //                 let test : {new(data):Test}  = validatable.value;
 //
 //             } else {
 //
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let instance : Test = validatable.value;
-//                 // @ts-expect-error
+//                 // @ts-expecerror
 //                 let test : {new(data):Test} = validatable.value;
 //             }
 //

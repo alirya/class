@@ -1,8 +1,8 @@
-import Validator from "@dikac/t-validator/simple";
+import Validator from "@alirya/validator/simple";
 import InstanceofValidatable from "../validatable/instance-parameters";
-import Return from "@dikac/t-validator/validatable/simple";
+import Return from "@alirya/validator/validatable/simple";
 import Class from "../class";
-import DynamicParameters from "@dikac/t-validator/message/function/validatable-parameters";
+import DynamicParameters from "@alirya/validator/message/function/validatable-parameters";
 import StringInstance from "../assert/string/instance-parameters";
 
 export default function InstanceParameters<

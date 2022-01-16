@@ -1,9 +1,9 @@
-import Validator from "@dikac/t-validator/simple";
-import Message from "@dikac/t-message/message";
+import Validator from "@alirya/validator/simple";
+import Message from "@alirya/message/message";
 import InstanceofValidatable from "../validatable/instance-parameters";
 import Class from "../class";
 import ClassContainer from "../class/class";
-import DynamicParameter from "@dikac/t-validator/message/function/validatable-parameter";
+import DynamicParameter from "@alirya/validator/message/function/validatable-parameter";
 import InstanceParameters from "./instance-parameters";
 
 export type InstanceArgument<

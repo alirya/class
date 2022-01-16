@@ -13,7 +13,7 @@ describe('basic', ()=>{
 
     } else {
 
-        // @ts-expect-error
+        // @ts-expecerror
         value.name;
     }
 
