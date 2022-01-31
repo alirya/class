@@ -2,7 +2,7 @@ import Instance from '../../../dist/boolean/instance';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
-describe('boolean', function() {
+it('boolean', function() {
 
     let value : unknown = true;
 
@@ -21,7 +21,7 @@ describe('boolean', function() {
     }
 });
 
-describe('object', function() {
+it('object', function() {
 
     let value : unknown = {};
 
@@ -36,7 +36,7 @@ describe('object', function() {
     }
 });
 
-describe('string', function() {
+it('string', function() {
 
     let value : unknown = 'str';
 
@@ -52,7 +52,7 @@ describe('string', function() {
 });
 
 
-describe('number', function() {
+it('number', function() {
 
     let value : unknown = 1;
 
@@ -67,7 +67,7 @@ describe('number', function() {
     }
 });
 
-describe('function', function() {
+it('function', function() {
 
     let value : unknown = ()=>null;
 

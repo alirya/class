@@ -3,7 +3,7 @@ import Class from '../../../dist/boolean/class';
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 
-describe('basic', ()=>{
+it('basic', ()=>{
 
     let value : unknown = 1;
 
