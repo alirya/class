@@ -1,5 +1,3 @@
-// import Instance from "../../dist/validator/instance";
-// import InstanceString from "../../dist/validatable/string/instance";
 //
 // it("enable console log", () => { spyOn(console, 'log').and.callThrough();});
 //

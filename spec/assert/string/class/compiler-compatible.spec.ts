@@ -1,11 +1,11 @@
-import InstanceParameters from "../../../../dist/validator/instance-parameters";
-import InstanceParametersMessage from "../../../../dist/assert/string/instance-parameters";
+import InstanceParameters from "../../../../dist/validator/instance";
+import InstanceParametersMessage from "../../../../dist/assert/string/instance";
 
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('boolean', function() {
 
-    InstanceParameters(Map, InstanceParametersMessage)
+    InstanceParameters.Parameters(Map, InstanceParametersMessage.Parameters);
 
 });

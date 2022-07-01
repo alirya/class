@@ -1,14 +1,14 @@
-import Assert from '../assert/instance-parameters';
-import StringError from '../assert/throwable/instance-parameters';
+import {InstanceParameters} from '../assert/instance';
+import StringError from '../assert/throwable/instance';
 import Class from '../class';
 
 export default function Instance<Instance extends Class<object, unknown[]>>(
     value : unknown,
     instance : Instance,
-    error : (value:unknown, instance : Instance)=>Error = StringError
+    error : (value:unknown, instance : Instance)=>Error = StringError.Parameters
 ) : Instance {
 
-    Assert(value, instance, error);
+    InstanceParameters(value, instance, error);
 
     return value;
 }
