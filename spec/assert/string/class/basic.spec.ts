@@ -1,4 +1,4 @@
-import Class from '../../../../dist/assert/string/class';
+import Class from '../../../../dist/assert/string/class.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

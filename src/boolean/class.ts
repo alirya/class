@@ -1,4 +1,4 @@
-import Class from '../class';
+import Class from '../class.js';
 
 const handler : ProxyHandler<any> = {construct() { return {}; }};
 /**

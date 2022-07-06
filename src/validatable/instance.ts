@@ -1,13 +1,13 @@
-import Class from '../class';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import {ReadonlyWrapperType, ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import InstanceBoolean from '../value/boolean/instance';
-import ClassInterface from '../class/class';
-import Dynamic from '@alirya/validator/value/validatable';
+import Class from '../class.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import {ReadonlyWrapperType, ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import InstanceBoolean from '../value/boolean/instance.js';
+import ClassInterface from '../class/class.js';
+import Dynamic from '@alirya/validator/value/validatable.js';
 
 
 export interface InstanceType<ValueT, InstanceT extends Class<object, unknown[]>, MessageT> extends ReadonlyWrapperType<Value<ValueT>, Message<MessageT>, Validatable> {

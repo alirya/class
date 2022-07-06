@@ -1,4 +1,4 @@
-import Class from '../../../dist/boolean/class';
+import Class from '../../../dist/boolean/class.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

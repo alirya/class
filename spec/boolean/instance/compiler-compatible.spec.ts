@@ -1,4 +1,4 @@
-import Instance from '../../../dist/boolean/instance';
+import Instance from '../../../dist/boolean/instance.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

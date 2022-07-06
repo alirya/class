@@ -1,7 +1,7 @@
-import Name from '@alirya/object/string/name';
-import Class from '../../class';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
+import Name from '@alirya/object/string/name.js';
+import Class from '../../class.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
 
 export function InstanceParameters<Instance extends Class<object, unknown[]>>(
     value : object,

@@ -1,5 +1,5 @@
 import {Class} from 'ts-toolbelt';
-import Constructor from '../class';
+import Constructor from '../class.js';
 
 export default function Instance<
     InstanceT extends Constructor<object, unknown[]>

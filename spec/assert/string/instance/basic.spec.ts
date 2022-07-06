@@ -1,4 +1,4 @@
-import Instance from '../../../../dist/assert/string/instance';
+import Instance from '../../../../dist/assert/string/instance.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 

@@ -1,7 +1,7 @@
-import InstanceString from '../string/instance';
-import Class from '../../class';
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
+import InstanceString from '../string/instance.js';
+import Class from '../../class.js';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
 
 
 export function InstanceParameters<Instance extends Class<object, unknown[]>>(

@@ -1,8 +1,8 @@
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import ClassGuard from '../boolean/class';
-import Return from '@alirya/validator/validatable/simple';
-import Instance from '@alirya/validator/validatable/validatable';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import ClassGuard from '../boolean/class.js';
+import Return from '@alirya/validator/validatable/simple.js';
+import Instance from '@alirya/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
 
 export function ClassParameters<MessageT, Argument>(
     value : Argument,
@@ -12,8 +12,8 @@ export function ClassParameters<MessageT, Argument>(
     return <Return<Argument, string, Readonly<Instance<unknown, MessageT>>>> CallbackParameters(value, ClassGuard, message);
 }
 
-import Value from '@alirya/value/value';
-import Message from '@alirya/message/message';
+import Value from '@alirya/value/value.js';
+import Message from '@alirya/message/message.js';
 
 export function ClassParameter<MessageT, Argument>(
     {
