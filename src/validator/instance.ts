@@ -14,13 +14,13 @@ export function InstanceParameters<
     >(
     instance : InstanceT,
     message : ValidatableParameters<InstanceT, MessageT, [InstanceT]>,
-) : Validator<unknown, InstanceT, InstanceofValidatable.Type<any, InstanceT, MessageT>>;
+) : Validator<unknown, InstanceT, MessageT, InstanceofValidatable.Context<InstanceT>>;
 
 export function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
     >(
     instance : InstanceT,
-) : Validator<unknown, InstanceT, InstanceofValidatable.Type<any, InstanceT, string>>;
+) : Validator<unknown, InstanceT, string, InstanceofValidatable.Context<InstanceT>>;
 
 export function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,
@@ -28,13 +28,13 @@ export function InstanceParameters<
 >(
     instance : InstanceT,
     message : ValidatableParameters<InstanceT, MessageT|string, [InstanceT]> = StringInstance.Parameters,
-) : Validator<unknown, InstanceT, InstanceofValidatable.Type<any, InstanceT, MessageT|string>> {
+) : Validator<unknown, InstanceT, MessageT|string, InstanceofValidatable.Context<InstanceT>> {
 
     return function(value) {
 
-        return <Return<unknown, InstanceT, InstanceofValidatable.Type<object, InstanceT, MessageT>>> new InstanceofValidatable.Parameters(value, instance, message);
+        return <Return<unknown, InstanceT, MessageT, InstanceofValidatable.Context<InstanceT>>> new InstanceofValidatable.Parameters(value, instance, message);
 
-    } as Validator<unknown, InstanceT, InstanceofValidatable.Type<any, InstanceT, MessageT>>;
+    } as Validator<unknown, InstanceT, MessageT, InstanceofValidatable.Context<InstanceT>>;
 }
 
 
@@ -48,14 +48,14 @@ export function InstanceParameter<
     MessageT = unknown
 >(
     argument : InstanceArgument<InstanceT, MessageT>
-) : Validator<any, InstanceT, InstanceofValidatable.Type<any, InstanceT, MessageT>>;
+) : Validator<any, InstanceT, MessageT, InstanceofValidatable.Context<InstanceT>>;
 
 export function InstanceParameter<
     InstanceT extends Class<object, unknown[]>,
     MessageT = unknown
 >(
     argument :  InstanceArgument<InstanceT,  MessageT|string>
-) : Validator<any, InstanceT, InstanceofValidatable.Type<any, InstanceT,  MessageT|string>> {
+) : Validator<any, InstanceT,  MessageT|string, InstanceofValidatable.Context<InstanceT>> {
 
      let message : ValidatableParameter<InstanceT, MessageT|string, Dynamic<InstanceT> & {instance:InstanceT}>
          = argument.message

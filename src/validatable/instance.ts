@@ -8,15 +8,20 @@ import {CallbackParameters} from '@alirya/validator/validatable/callback';
 import InstanceBoolean from '../value/boolean/instance';
 import ClassInterface from '../class/class';
 import Dynamic from '@alirya/validator/value/validatable';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable';
 
 
-export interface InstanceType<ValueT, InstanceT extends Class<object, unknown[]>, MessageT> extends ReadonlyWrapperType<Value<ValueT>, Message<MessageT>, Validatable> {
+export interface InstanceContext<
+    // ValueT,
+    InstanceT extends Class<object, unknown[]>,
+    // MessageT
+> /*extends ReadonlyWrapperType<Value<ValueT>, Message<MessageT>, Validatable>*/ {
     readonly class : InstanceT;
 }
 
 export class InstanceParameter<ValueT, InstanceT extends Class<object, unknown[]>, MessageT>
     extends ReadonlyWrapperParameters<Value<ValueT>, Message<MessageT>, Validatable>
-    implements InstanceType<ValueT, InstanceT, MessageT>
+    implements ValidatorValidatable<ValueT, MessageT>, InstanceContext</*ValueT, */InstanceT/*, MessageT*/>
 {
     readonly class : InstanceT;
 
@@ -55,14 +60,14 @@ export class InstanceParameters<ValueT, InstanceT extends Class<object, unknown[
 namespace Instance {
     export const Parameters = InstanceParameters;
     export const Parameter = InstanceParameter;
-    export type Type<
-        ValueT,
+    export type Context<
+        // ValueT,
         InstanceT extends Class<object, unknown[]>,
-        MessageT
-    > = InstanceType<
-        ValueT,
-        InstanceT,
-        MessageT
+        // MessageT
+    > = InstanceContext<
+        // ValueT,
+        InstanceT
+        // MessageT
     >;
 }
 export default Instance;

@@ -7,9 +7,9 @@ import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/mes
 export function ClassParameters<MessageT, Argument>(
     value : Argument,
     message : ValidatableParameters<Argument, MessageT>,
-) : Return<Argument, string, Readonly<Instance<unknown, MessageT>>> {
+) : Return<Argument, string, MessageT> {
 
-    return <Return<Argument, string, Readonly<Instance<unknown, MessageT>>>> CallbackParameters(value, ClassGuard, message);
+    return <Return<Argument, string, MessageT>> CallbackParameters(value, ClassGuard, message);
 }
 
 import Value from '@alirya/value/value';
@@ -20,7 +20,7 @@ export function ClassParameter<MessageT, Argument>(
         value,
         message,
     } : Value<Argument> & Message<ValidatableParameter<Argument, MessageT>>
-) : Return<Argument, string, Readonly<Instance<unknown, MessageT>>> {
+) : Return<Argument, string, MessageT> {
 
     return ClassParameters(value, (value, valid) => message({value, valid}));
 }
