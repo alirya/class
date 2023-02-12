@@ -1,4 +1,4 @@
-import ClassInterface from '../class';
+import ClassInterface from '../class.js';
 /**
  * multi purpose type interface
  */

@@ -1,7 +1,7 @@
-import Value from '@alirya/value/value';
-import BooleanInstance from '../../boolean/instance';
-import ClassContainer from '../../class/class';
-import Class from '../../class';
+import Value from '@alirya/value/value.js';
+import BooleanInstance from '../../boolean/instance.js';
+import ClassContainer from '../../class/class.js';
+import Class from '../../class.js';
 
 export default function Instance<
     Instance extends Class<object, unknown[]>

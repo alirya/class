@@ -1,6 +1,6 @@
-import Assert from '../assert/class';
-import StringError from '../assert/throwable/class';
-import ClassInterface from '../class';
+import Assert from '../assert/class.js';
+import StringError from '../assert/throwable/class.js';
+import ClassInterface from '../class.js';
 
 export default function Class(
     value : unknown,

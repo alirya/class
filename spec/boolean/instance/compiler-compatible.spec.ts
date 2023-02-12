@@ -1,83 +1,83 @@
-import Instance from '../../../dist/boolean/instance';
+import Instance from '../../../dist/boolean/instance.js';
 
 it('enable console log', () => { spyOn(console, 'log').and.callThrough();});
 
 it('boolean', function() {
 
-    let value : unknown = true;
+    const value : unknown = true;
 
     if(Instance(value, Boolean)) {
 
-        let result : Boolean = value;
-        let boolean : boolean = value.valueOf();
+        const result : Boolean = value;
+        const boolean : boolean = value.valueOf();
 
     } else {
 
         // @ts-expect-error
-        let result : Boolean  = value;
+        const result : Boolean  = value;
 
         // @ts-expect-error
-        let boolean : boolean  = value.valueOf();
+        const boolean : boolean  = value.valueOf();
     }
 });
 
 it('object', function() {
 
-    let value : unknown = {};
+    const value : unknown = {};
 
     if(Instance(value, Object)) {
 
-        let result : object = value;
+        const result : object = value;
 
     } else {
 
         // @ts-expect-error
-        let result : object = value;
+        const result : object = value;
     }
 });
 
-it('string', function() {
+it('str.jsing', function() {
 
-    let value : unknown = 'str';
+    const value : unknown = 'str.js';
 
     if(Instance(value, String)) {
 
-        let result : String = value;
+        const result : String = value;
 
     } else {
 
         // @ts-expect-error
-        let result : String = value;
+        const result : String = value;
     }
 });
 
 
 it('number', function() {
 
-    let value : unknown = 1;
+    const value : unknown = 1;
 
     if(Instance(value, Number)) {
 
-        let result : Number = value;
+        const result : Number = value;
 
     } else {
 
         // @ts-expect-error
-        let result : Number = value;
+        const result : Number = value;
     }
 });
 
 it('function', function() {
 
-    let value : unknown = ()=>null;
+    const value : unknown = ()=>null;
 
     if(Instance(value, Function)) {
 
-        let result : Function = value;
+        const result : Function = value;
 
     } else {
 
         // @ts-expect-error
-        let result : Function = value;
+        const result : Function = value;
     }
 });

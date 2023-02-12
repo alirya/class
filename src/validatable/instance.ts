@@ -1,14 +1,14 @@
-import Class from '../class';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable';
-import Value from '@alirya/value/value';
-import Validatable from '@alirya/validatable/validatable';
-import Message from '@alirya/message/message';
-import {ReadonlyWrapperType, ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper';
-import {CallbackParameters} from '@alirya/validator/validatable/callback';
-import InstanceBoolean from '../value/boolean/instance';
-import ClassInterface from '../class/class';
-import Dynamic from '@alirya/validator/value/validatable';
-import ValidatorValidatable from '@alirya/validator/validatable/validatable';
+import Class from '../class.js';
+import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Value from '@alirya/value/value.js';
+import Validatable from '@alirya/validatable/validatable.js';
+import Message from '@alirya/message/message.js';
+import {ReadonlyWrapperType, ReadonlyWrapperParameters} from '@alirya/validator/validatable/readonly-wrapper.js';
+import {CallbackParameters} from '@alirya/validator/validatable/callback.js';
+import InstanceBoolean from '../value/boolean/instance.js';
+import ClassInterface from '../class/class.js';
+import Dynamic from '@alirya/validator/value/validatable.js';
+import ValidatorValidatable from '@alirya/validator/validatable/validatable.js';
 
 
 export interface InstanceContext<
@@ -31,7 +31,7 @@ export class InstanceParameter<ValueT, InstanceT extends Class<object, unknown[]
             ClassInterface<InstanceT>
     ) {
 
-        let msg = CallbackParameters(argument, InstanceBoolean, ()=>argument.message(this));
+        const msg = CallbackParameters(argument, InstanceBoolean, ()=>argument.message(this));
 
         super(argument, msg, msg);
 

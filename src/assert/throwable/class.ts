@@ -1,9 +1,9 @@
-import ClassType from '../string/class';
-import Value from '@alirya/value/value';
+import ClassType from '../string/class.js';
+import Value from '@alirya/value/value.js';
 
 export function ClassParameters(
     string : unknown,
-    subject : string = 'type',
+    subject  = 'type',
     conversion : (value:unknown)=>string = value=>typeof value
 ) : Error {
 
