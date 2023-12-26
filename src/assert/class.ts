@@ -1,5 +1,5 @@
 import Guard from '../boolean/class.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import ClassError from './throwable/class.js';
 import ClassInterface from '../class.js';
 

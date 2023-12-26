@@ -1,7 +1,7 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import ClassValidatable from '../validatable/class.js';
-import Instance from '@alirya/validator/validatable/validatable.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import Instance from '@axiona/validator/validatable/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 
 export function ClassParameters<MessageT>(
     message : ValidatableParameters<unknown, MessageT>,

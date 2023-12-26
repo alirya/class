@@ -1,12 +1,12 @@
-import Validator from '@alirya/validator/simple.js';
+import Validator from '@axiona/validator/simple.js';
 import InstanceofValidatable from '../validatable/instance.js';
-import Return from '@alirya/validator/validatable/simple.js';
+import Return from '@axiona/validator/validatable/simple.js';
 import Class from '../class.js';
-import {ValidatableParameters, ValidatableParameter} from '@alirya/validator/message/function/validatable.js';
+import {ValidatableParameters, ValidatableParameter} from '@axiona/validator/message/function/validatable.js';
 import StringInstance from '../assert/string/instance.js';
-import Message from '@alirya/message/message.js';
+import Message from '@axiona/message/message.js';
 import ClassContainer from '../class/class.js';
-import Dynamic from '@alirya/validator/value/validatable.js';
+import Dynamic from '@axiona/validator/value/validatable.js';
 
 export function InstanceParameters<
     InstanceT extends Class<object, unknown[]>,

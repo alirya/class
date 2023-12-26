@@ -1,8 +1,8 @@
 import Guard from '../boolean/instance.js';
-import {CallbackParameters} from '@alirya/function/assert/callback.js';
+import {CallbackParameters} from '@axiona/function/assert/callback.js';
 import InstanceError from './throwable/instance.js';
 import Class from '../class.js';
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 
 export function InstanceParameters<Instance extends Class<object, unknown[]>>(
     value : unknown,

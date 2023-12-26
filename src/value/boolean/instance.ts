@@ -1,4 +1,4 @@
-import Value from '@alirya/value/value.js';
+import Value from '@axiona/value/value.js';
 import BooleanInstance from '../../boolean/instance.js';
 import ClassContainer from '../../class/class.js';
 import Class from '../../class.js';
